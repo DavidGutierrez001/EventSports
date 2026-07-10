@@ -1,12 +1,13 @@
 export default function Hero() {
     return (
-        <div className="relative h-[90dvh] w-screen overflow-hidden">
+        <div className="relative h-svh w-screen overflow-hidden">
             <video
                 src="/videos/rally.mp4"
                 className="h-full w-full object-cover"
                 autoPlay
                 muted
                 loop
+                playsInline
             />
 
             <div
@@ -18,7 +19,14 @@ export default function Hero() {
                 }}
             />
 
-            <h1 className="absolute bottom-1/3 left-1/12 text-[clamp(3rem,8vw,5.5rem)] leading-none text-white font-extrabold tracking-tighter font-oswald">DONDE EL <br /><span className="text-[clamp(3.6rem,8vw,6.2rem)]">DEPORTE</span> <br />COBRA VIDA.</h1>
+            <div className="absolute top-1/2 -translate-y-1/2 left-[10%] font-bebas font-bold leading-none">
+                <h1 className="text-[clamp(3.5rem,6vw,8rem)]">DONDE EL <br />
+                    <span className="text-[clamp(4rem,7vw,9rem)]">
+                        DEPORTE
+                    </span><br />
+                    COBRA VIDA.
+                </h1>
+            </div>
         </div>
     )
 }
