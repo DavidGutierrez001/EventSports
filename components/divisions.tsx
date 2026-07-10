@@ -5,17 +5,17 @@ import ArrowRight02Icon from '@iconify-react/hugeicons/arrow-right-02';
 export default function Divisions() {
     return (
         <>
-            <section className="flex flex-col md:flex-row relative min-h-[90svh] w-screen flex-col p-[clamp(1rem,2.5vw,2rem)] pt-20 pb-10 md:py-0 lg:max-w-350">
+            <section className="flex flex-col justify-center items-center md:flex-row relative min-h-[clamp(90svh,90vh,90svh)] w-full flex-col pt-20 pb-10 lg:max-w-[80vw] px-10">
                 <div className="flex-1 order-2 md:order-1 justify-end items-center flex">
                     <img
                         src="higuita.webp"
                         alt="rene higuita"
-                        className="h-[clamp(25rem,55vw,55rem)] -left-25 md:right-auto md:h-[70svh] object-cover absolute bottom-0 md:-translate-x-10 lg:translate-x-20 z-10 pointer-events-none"
+                        className="h-[clamp(25rem,50vw,50rem)] md:h-[70svh] md:right-auto object-cover absolute bottom-0 md:translate-x-20 lg:translate-x-20 z-10 pointer-events-none"
                     />
                 </div>
 
-                <div className="flex-1/3 flex flex-col justify-center lg:-translate-x-15 order-1 md:order-2">
-                    <h1 className="font-bebas font-bold leading-none text-[clamp(4.5rem,7vw,9rem)] tracking-wide">
+                <div className="flex-1/3 flex flex-col justify-center order-1 md:order-2">
+                    <h1 className="font-bebas font-bold leading-none text-[clamp(4.5rem,7vw,7rem)] tracking-wide">
                         EVENTOS
                     </h1>
                     <p className="text-[clamp(1rem,2.5vw,1.4rem)] text-white/60 mb-5">
