@@ -24,8 +24,8 @@ body {
   color: var(--foreground);
 }
 
-.font-oswald {
-  font-family: var(--font-oswald);
+.font-bebas {
+  font-family: var(--font-bebas);
 }
 
 .item_menu {
