@@ -29,7 +29,7 @@ export default function Navbar() {
                     className="flex cursor-pointer items-center gap-5 p-1"
                     onClick={() => setIsMenuOpen(true)}
                 >
-                    <Menu01Icon height="3.5em" />
+                    <Menu01Icon height="3em" />
                 </button>
             </div>
 
@@ -48,18 +48,18 @@ export default function Navbar() {
             >
                 <header className="flex items-center justify-end p-5">
                     <button
-                        className="cursor-pointer rounded-full p-2 transition-colors hover:bg-black/[0.1]"
+                        className="cursor-pointer rounded-full p-2 transition-colors hover:bg-black/10"
                         onClick={() => setIsMenuOpen(false)}
                     >
                         <Cancel01Icon height="3.5em" color="#000" />
                     </button>
                 </header>
 
-                <ul className="flex flex-col gap-5 px-20 py-10 text-[clamp(2rem,2vw,2.7rem)] font-semibold text-black md:gap-10">
-                    <li><a href="/">INICIO</a></li>
-                    <li><a href="/about">EVENTOS</a></li>
-                    <li><a href="/contact">DIVISIONES</a></li>
-                    <li><a href="/contact">NOTICIAS</a></li>
+                <ul className="flex flex-col px-20 text-[clamp(2rem,2vw,2.7rem)] font-semibold text-black">
+                    <li className="item_menu"><a href="/">INICIO</a></li>
+                    <li className="item_menu"><a href="/about">EVENTOS</a></li>
+                    <li className="item_menu"><a href="/divisions">DIVISIONES</a></li>
+                    <li className="item_menu"><a href="/contact">NOTICIAS</a></li>
                 </ul>
             </div>
         </nav>
