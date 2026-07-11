@@ -19,9 +19,9 @@ export default function Hero() {
                 }}
             />
 
-            <div className="absolute top-1/2 -translate-y-1/2 left-[10%] font-bebas font-bold leading-none">
-                <h1 className="text-[clamp(3.5rem,6vw,8rem)]">DONDE EL <br />
-                    <span className="text-[clamp(4rem,7vw,9rem)]">
+            <div className="absolute top-1/2 -translate-y-1/2 left-[10%] font-bebas font-bold leading-none border-b-3 pe-10">
+                <h1 className="text-[clamp(4rem,6vw,8rem)]">DONDE EL <br />
+                    <span className="text-[clamp(5rem,7vw,9rem)]">
                         DEPORTE
                     </span><br />
                     COBRA VIDA.
