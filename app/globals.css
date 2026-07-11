@@ -31,10 +31,17 @@ body {
 .item_menu {
   display: flex;
   width: 100%;
-  padding: 2rem;
-  cursor: pointer; 
+  padding: 1.3rem;
+  cursor: pointer;
 
   &:hover {
     background-color: #0a0a0a13;
   }
+}
+
+.item_selected {
+  border-left: 8px solid #000;
+  background-color: #0a0a0a13;
+  pointer-events: none;
+  color: #000;
 }
