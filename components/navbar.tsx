@@ -5,17 +5,19 @@ import Image from "next/image";
 import Menu01Icon from "@iconify-react/hugeicons/menu-01";
 import Cancel01Icon from "@iconify-react/hugeicons/cancel-01";
 
+import Link from "next/link";
+
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
 
         <>
-            <nav className="fixed top-0 z-20 grid h-20 w-full grid-cols-3 items-center px-8 backdrop-blur-md">
+            <nav className={'fixed top-0 z-20 flex h-20 w-full items-center px-3 md:px-8'}>
 
-                <div />
+                <div className="flex-1 hidden md:flex"/>
 
-                <div className="order-2 flex items-center justify-self-center">
+                <div className="flex-1 flex items-center justify-start md:justify-center">
                     <a href="/" rel="noopener noreferrer">
                         <Image
                             src="/eventsports.svg"
@@ -27,9 +29,14 @@ export default function Navbar() {
                     </a>
                 </div>
 
-                <div className="order-3 justify-self-end flex items-center gap-5">
+                <div className="flex justify-end flex-1 items-center gap-3 md:gap-10">
+                    <Link href="/login" className="relative overflow-hidden login-selected py-1 text-white/90 hover:text-white">
+                        <span className="cursor-pointer font-light">
+                            Iniciar sesión
+                        </span>
+                    </Link>
                     <button
-                        className="flex cursor-pointer items-center gap-5 p-1 hover:bg-black/10 rounded transition-colors text-white"
+                        className="flex cursor-pointer items-center gap-5 p-1 hover:bg-black/20 rounded transition-colors text-white"
                         onClick={() => setIsMenuOpen(true)}
                     >
                         <Menu01Icon height="3em" />
@@ -45,7 +52,7 @@ export default function Navbar() {
             />
 
             <div
-                className={`fixed inset-y-0 right-0 z-30 flex h-screen w-full max-w-170 flex-col bg-white transition-transform duration-300 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"
+                className={`fixed inset-y-0 right-0 z-30 flex h-screen w-full max-w-150 flex-col bg-white transition-transform duration-300 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"
                     }`}
             >
                 <header className="flex items-center justify-between p-[clamp(1rem,2vw,2rem)]">
@@ -66,7 +73,7 @@ export default function Navbar() {
                     </button>
                 </header>
 
-                <ul className="flex flex-col relative px-[clamp(1rem,2vw,2rem)] text-[clamp(1.7rem,2vw,1.5rem)] gap-5 font-semibold text-zinc-600">
+                <ul className="flex flex-col relative px-5 md:px-10 text-[clamp(1rem,1.2vw,1.3rem)] gap-3 font-semibold text-zinc-600">
                     <li className="item_menu item_selected"><a href="/">INICIO</a></li>
                     <li className="item_menu"><a href="/about">EVENTOS</a></li>
                     <li className="item_menu"><a href="/divisions">DIVISIONES</a></li>
