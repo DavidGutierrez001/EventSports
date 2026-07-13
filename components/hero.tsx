@@ -1,6 +1,14 @@
 export default function Hero() {
     return (
-        <div className="relative h-svh w-screen overflow-hidden flex flex-col items-center justify-center">
+        <div className="h-svh w-screen overflow-hidden flex flex-col items-center justify-end relative">
+            <div
+                className="pointer-events-none z-10 absolute inset-0 opacity-15 bg-cover"
+                style={{
+                    backgroundImage:
+                        'url("https://framerusercontent.com/images/6mcf62RlDfRfU61Yg5vb2pefpi4.png")',
+                    backgroundSize: "150px",
+                }}
+            />
             <video
                 src="/videos/hero.mp4"
                 className="h-full w-full object-cover opacity-70"
@@ -10,16 +18,8 @@ export default function Hero() {
                 playsInline
             />
 
-            <div
-                className="pointer-events-none absolute inset-0 opacity-10 bg-cover bg-center"
-                style={{
-                    backgroundImage:
-                        'url("https://framerusercontent.com/images/6mcf62RlDfRfU61Yg5vb2pefpi4.png")',
-                    backgroundSize: "220px",
-                }}
-            />
 
-            <div className="absolute top-1/2 -translate-y-1/2 flex max-w-460 w-full justify-between px-[clamp(1rem,5vw,5rem)] flex-col md:flex-row gap-10">
+            <div className="absolute flex max-w-470 w-full h-[calc(100%-5rem)] justify-center md:justify-between px-[clamp(1rem,5vw,5rem)] flex-col md:flex-row gap-10 items-start md:items-center">
                 <div className="font-bebas font-bold leading-none border-b-3 max-w-90 min-w-90 md:min-w-fit md:max-w-fit pe-10">
                     <h1 className="text-[clamp(4rem,6vw,8rem)]">
                         DONDE EL <br />
