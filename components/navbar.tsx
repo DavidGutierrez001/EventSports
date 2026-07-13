@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Menu01Icon from "@iconify-react/hugeicons/menu-01";
+import Menu09Icon from '@iconify-react/hugeicons/menu-09';
 import Cancel01Icon from "@iconify-react/hugeicons/cancel-01";
 
 import Link from "next/link";
@@ -13,9 +13,17 @@ export default function Navbar() {
     return (
 
         <>
-            <nav className={'fixed top-0 z-20 flex h-20 w-full items-center px-3 md:px-8'}>
+            <nav className={'fixed top-0 z-20 flex h-20 w-full items-center px-5 md:px-8 backdrop-blur-xs'}>
 
-                <div className="flex-1 hidden md:flex"/>
+                <div className="flex flex-1 order-3 md:order-0 md:flex items-center justify-end md:justify-start">
+                    <button
+                        className="flex cursor-pointer items-center gap-2 p-1 hover:bg-black/20 rounded font-light transition-colors text-white"
+                        onClick={() => setIsMenuOpen(true)}
+                    >
+                        <Menu09Icon height="3em" />
+                        MENÚ
+                    </button>
+                </div>
 
                 <div className="flex-1 flex items-center justify-start md:justify-center">
                     <a href="/" rel="noopener noreferrer">
@@ -29,18 +37,18 @@ export default function Navbar() {
                     </a>
                 </div>
 
-                <div className="flex justify-end flex-1 items-center gap-3 md:gap-10">
-                    <Link href="/login" className="relative overflow-hidden login-selected py-1 text-white/90 hover:text-white">
+                <div className="justify-end flex-1 items-center gap-3 md:gap-10 relative order-3 hidden md:flex">
+                    <Link href="/login" className="relative overflow-hidden login-selected py-1 text-white/90 hover:text-white hidden lg:flex">
                         <span className="cursor-pointer font-light">
                             Iniciar sesión
                         </span>
                     </Link>
-                    <button
-                        className="flex cursor-pointer items-center gap-5 p-1 hover:bg-black/20 rounded transition-colors text-white"
-                        onClick={() => setIsMenuOpen(true)}
-                    >
-                        <Menu01Icon height="3em" />
-                    </button>
+
+                    <Link href="/register" className="bg-white/80 hidden lg:flex hover:bg-white px-5 py-2 rounded-full text-black relative overflow-hidden shadow-sm">
+                        <span>
+                            Registrarse
+                        </span>
+                    </Link>
                 </div>
             </nav>
 
@@ -52,7 +60,7 @@ export default function Navbar() {
             />
 
             <div
-                className={`fixed inset-y-0 right-0 z-30 flex h-screen w-full max-w-150 flex-col bg-white transition-transform duration-300 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"
+                className={`fixed inset-y-0 -left-1 z-30 flex h-screen w-full max-w-150 flex-col bg-white transition-transform duration-300 ease-in-out ${isMenuOpen ? "translate-x-0" : "-translate-x-full"
                     }`}
             >
                 <header className="flex items-center justify-between p-[clamp(1rem,2vw,2rem)]">

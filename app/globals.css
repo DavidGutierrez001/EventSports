@@ -40,7 +40,7 @@ body {
 }
 
 .item_selected {
-  border-left: 8px solid #000;
+  border-right: 8px solid #000;
   background-color: #0a0a0a13;
   pointer-events: none;
   color: #000;
