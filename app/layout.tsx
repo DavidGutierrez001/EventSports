@@ -36,8 +36,8 @@ export default function RootLayout({
       lang="es"
       className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col overflow-x-hidden">
-        <header className="sticky top-0 z-20">
+      <body className="min-h-full flex flex-col overflow-x-hidden relative">
+        <header className="fixed top-0 z-20">
           <Navbar />
         </header>
 

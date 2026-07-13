@@ -13,7 +13,7 @@ export default function Navbar() {
     return (
 
         <>
-            <nav className={'fixed top-0 flex h-20 w-full items-center px-5 md:px-8 backdrop-blur-xs'}>
+            <nav className={'sticky w-screen top-0 flex h-20 items-center px-5 md:px-8 backdrop-blur-xs z-20'}>
 
                 <div className="flex flex-1 order-3 md:order-0 md:flex items-center justify-end md:justify-start">
                     <button
