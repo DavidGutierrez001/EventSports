@@ -20,8 +20,8 @@ export default function Navbar() {
                         className="flex cursor-pointer items-center gap-2 p-1 hover:bg-black/20 rounded font-light transition-colors text-white"
                         onClick={() => setIsMenuOpen(true)}
                     >
-                        <Menu09Icon height="3em" />
-                        MENÚ
+                        <Menu09Icon className="order-1 md:order-0" height="3em" />
+                        <span className="order-0 md:order-1">MENÚ</span>
                     </button>
                 </div>
 
