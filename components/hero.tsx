@@ -20,7 +20,7 @@ export default function Hero() {
                 playsInline
             />
 
-            <div className="absolute flex max-w-470 w-full h-[calc(100%-5rem)] justify-center md:justify-between px-[clamp(1rem,5vw,5rem)] flex-col md:flex-row gap-10 items-start md:items-center">
+            <div className="absolute flex max-w-470 w-full h-[calc(100%-5rem)] justify-center md:justify-between px-[clamp(1rem,10vw,10rem)] flex-col md:flex-row gap-10 items-start md:items-center">
                 <div className="font-bebas font-bold leading-none border-b-3 max-w-90 min-w-90 md:min-w-fit md:max-w-fit pe-10">
                     <h1 className="text-[clamp(4rem,6vw,8rem)]">
                         DONDE EL <br />
@@ -29,8 +29,8 @@ export default function Hero() {
                     </h1>
                 </div>
 
-                <div className="font-light text-xl md:text-[2xl] text-white max-w-100 flex flex-col justify-center items-start overflow-hidden">
-                    <p>Descubre, explora, gestiona y participa en eventos deportivos en tu zona. Encuentra actividades de diferentes disciplinas y divisiones.
+                <div className="font-light text-white max-w-100 flex flex-col justify-center items-start overflow-hidden">
+                    <p className="text-xl md:text-[2xl]">Descubre, explora, gestiona y participa en eventos deportivos en tu zona. Encuentra actividades de diferentes disciplinas y divisiones.
                     </p>
                     <button className="flex w-full items-center btn-selected cursor-not-allowed p-4 md:p-5 text-lg text-black font-medium justify-center backdrop-blur-sm bg-white/90 hover:bg-white rounded shadow-md mt-10 transition-colors">
                         COMIENZA AHORA

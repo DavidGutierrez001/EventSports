@@ -60,7 +60,7 @@ export default function Navbar() {
             />
 
             <div
-                className={`fixed inset-y-0 -left-1 z-30 flex h-screen w-full max-w-150 flex-col bg-white transition-transform duration-300 ease-in-out ${isMenuOpen ? "translate-x-0" : "-translate-x-full"
+                className={`fixed inset-y-0 right-0 z-30 flex h-screen w-full max-w-150 flex-col bg-white transition-transform duration-300 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"
                     }`}
             >
                 <header className="flex items-center justify-between p-[clamp(1rem,2vw,2rem)]">
