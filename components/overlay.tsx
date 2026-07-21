@@ -7,9 +7,7 @@ export default function Overlay() {
 
     useEffect(() => {
         const isLoad = () => {
-            setTimeout(() => {
-                setIsLoaded(true)
-            }, 1000)
+            setIsLoaded(true)
         }
 
         window.addEventListener("load", isLoad);
@@ -20,13 +18,16 @@ export default function Overlay() {
     }, [])
 
     return (
-        <div className={`fixed flex justify-center items-center bg-white z-200 inset-0 h-screen w-screen 
+        <div className={`fixed flex flex-col gap-5 justify-center items-center bg-white z-200 inset-0 h-screen w-screen pointer-events-none
         ${isLoaded ? "loaded-overlay" : ""}`}>
             <img
                 className="h-12"
                 src="/eventsports-black.svg"
                 alt="Eventsports Logo"
             />
+            <span className={`text-zinc-900 border-b border-b-black`}>
+                {isLoaded ? "Completado" : "Cargando..."}
+            </span>
         </div>
     )
 }
