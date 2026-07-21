@@ -18,16 +18,14 @@ export default function Overlay() {
     }, [])
 
     return (
-        <div className={`fixed flex flex-col gap-5 justify-center items-center bg-white z-200 inset-0 h-screen w-screen pointer-events-none
+        <div className={`fixed flex flex-col gap-5 justify-center items-center bg-black z-200 inset-0 h-screen w-screen pointer-events-none transition-all duration-500 ease-in-out delay-500
         ${isLoaded ? "loaded-overlay" : ""}`}>
             <img
                 className="h-12"
-                src="/eventsports-black.svg"
+                src="/eventsports.svg"
                 alt="Eventsports Logo"
             />
-            <span className={`text-zinc-900 border-b border-b-black`}>
-                {isLoaded ? "Completado" : "Cargando..."}
-            </span>
+            <span className="loader" />
         </div>
     )
 }
